@@ -4,8 +4,11 @@
 {% endunless %}
 
 {% include install_instructions/shell.html %}
-{% include install_instructions/git.html %}
 {% include install_instructions/editor.html %}
+{% comment %}
+Commenting out the non-Shell and Text Editor instructions for this workshop so they are not distracting. 
+{% include install_instructions/git.html %}
+
 
 {% if site.flavor == "r" %}
 {% include install_instructions/r.html %}
@@ -17,6 +20,7 @@
 {% else %}
 {% include warning-flavor.html %}
 {% endif %}
+{% endcomment %}
 
 {% comment %}
 The following setup instructions are commented out because Carpentries workshops
